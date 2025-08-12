@@ -75,3 +75,18 @@ name, _, profession, _ = person_info  # Ignore age and location
 
 print(name)       # Output: Eve
 print(profession) # Output: Artist
+
+# Tuple Packing and Unpacking with Functions
+def get_user_info():
+    return "Bob", 29, "Engineer"
+
+name, age, profession = get_user_info()
+print(name)  # Output: Bob
+
+# Passing Multiple Values with Unpacking
+def display_info(name, age, profession):
+    print(f"{name} is {age} years old and works as a {profession}.")
+
+info_tuple = ("Charlie", 28, "Designer")
+
+display_info(*info_tuple) 
