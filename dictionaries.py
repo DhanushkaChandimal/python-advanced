@@ -61,3 +61,16 @@ for value in my_dict.values():
 print(list(my_dict.items()))  # Output: [('name', 'Alice'), ('age', 25), ('city', 'New York')]
 for key, value in my_dict.items():
     print(f"Key \"{key}\" holds \"{value}\" value")
+
+# # Looping Through Dictionaries
+# Looping through Keys Only:
+for key in my_dict:
+    print(f"{key}: {my_dict[key]}")
+
+# Looping through Values Only:
+for value in my_dict.values():
+    print(value)
+
+# Looping through Key-Value Pairs:
+for key, value in my_dict.items():
+    print(f"{key}: {value}")
