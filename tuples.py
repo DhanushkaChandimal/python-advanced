@@ -25,3 +25,29 @@ my_list = [1, 2, 3]
 my_tuple = tuple(my_list)
 
 
+
+## Tuple Manipulation
+
+# Accessing Tuple Elements
+my_tuple = ("apple", [1, 2, (11, 12, {"Set", "wow", 1})])
+print(my_tuple[0])
+print(my_tuple[1][2][2])
+
+# Slicing Tuples
+my_tuple = (1, 2, 3, 4, 5)
+print(my_tuple[1:4])  # Output: (2, 3, 4)
+
+# Looping over Tuples
+for num in my_tuple: 
+	print(num) 
+
+# Tuple Immutability
+# my_tuple[1] = 40  # Error! Tuples cannot be changed
+print("Before change: ", my_tuple)
+my_list = list(my_tuple)
+my_list[1] = 40
+my_tuple = tuple(my_list)
+print("After change: ", my_tuple)
+
+
+
