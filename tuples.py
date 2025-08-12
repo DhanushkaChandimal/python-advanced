@@ -5,8 +5,9 @@
 my_tuple = (1, 2, 3,"string", ("another tuple", 2, 3))
 print(my_tuple)
 print(my_tuple[0])
+print(my_tuple[-1])
 
-## Creating a Tuple
+# # Creating a Tuple
 
 # Using parentheses ()
 tuple1 = (10, "Python", 3.14)
@@ -26,7 +27,7 @@ my_tuple = tuple(my_list)
 
 
 
-## Tuple Manipulation
+# # Tuple Manipulation
 
 # Accessing Tuple Elements
 my_tuple = ("apple", [1, 2, (11, 12, {"Set", "wow", 1})])
@@ -51,3 +52,26 @@ print("After change: ", my_tuple)
 
 
 
+# # Packing and Unpacking Tuples
+# Tuple Packing
+person_info = "Alice", 30, "Developer"
+
+# Tuple Unpacking
+name, age, profession = person_info
+print(name)
+print(age)
+print(profession)
+
+# Extended Unpacking
+numbers = (1, 2, 3, 4, 5)
+first, *rest, last = numbers
+print(first)  # Output: 1
+print(rest)   # Output: [2, 3, 4]
+print(last)   # Output: 5
+
+# Ignoring Values with Underscore (_)
+person_info = ("Eve", 35, "Artist", "New York")
+name, _, profession, _ = person_info  # Ignore age and location
+
+print(name)       # Output: Eve
+print(profession) # Output: Artist
