@@ -106,3 +106,47 @@ for user, info in users.items():
     print(f"User ID: {user}")
     for key, value in info.items():
         print(f"  {key}: {value}")
+
+
+
+# # A List of Dictionaries
+students = [
+    {
+        'name': 'Alice',
+        'age': 25,
+        'major': 'Physics'
+    },
+    {
+        'name': 'Bob',
+        'age': 22,
+        'major': 'Computer Science'
+    },
+    {
+        'name': 'Charlie',
+        'age': 23,
+        'major': 'Mathematics'
+    }
+]
+first_student_major = students[0]['major']
+print(first_student_major)  # Output: Physics
+for student in students:
+    print(f"Name: {student['name']}, Age: {student['age']}, Major: {student['major']}")
+
+
+
+# # A List within a Dictionary
+favorite_books = {
+    'Alice': ['1984', 'To Kill a Mockingbird', 'Pride and Prejudice'],
+    'Bob': ['The Great Gatsby', 'Catch-22', 'Moby Dick'],
+    'Charlie': ['The Hobbit', 'Harry Potter', 'War and Peace']
+}
+alice_books = favorite_books['Alice']
+print(alice_books)  # Output: ['1984', 'To Kill a Mockingbird', 'Pride and Prejudice']
+
+second_favorite_bob = favorite_books['Bob'][1]
+print(second_favorite_bob)  # Output: Catch-22
+
+for person, books in favorite_books.items():
+    print(f"{person}'s favorite books:")
+    for book in books:
+        print(f" - {book}")
