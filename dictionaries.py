@@ -150,3 +150,14 @@ for person, books in favorite_books.items():
     print(f"{person}'s favorite books:")
     for book in books:
         print(f" - {book}")
+
+
+students = {
+    'Alice': 85,
+    'Bob': 42,
+    'Charlie': 68,
+    'David': 49
+}
+
+for name, marks in students.items():
+    print(f"{name} - {"Passed" if marks >= 50 else "Failed"}")
