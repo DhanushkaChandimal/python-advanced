@@ -74,3 +74,35 @@ for value in my_dict.values():
 # Looping through Key-Value Pairs:
 for key, value in my_dict.items():
     print(f"{key}: {value}")
+
+
+
+# # Nested Dictionaries
+users = {
+    'user1': {
+        'name': 'Alice',
+        'age': 25,
+        'address': {
+            'street': '123 Main St',
+            'city': 'New York',
+            'zipcode': '10001'
+        }
+    },
+    'user2': {
+        'name': 'Bob',
+        'age': 30,
+        'address': {
+            'street': '456 Elm St',
+            'city': 'San Francisco',
+            'zipcode': '94107'
+        }
+    }
+}
+
+city_user1 = users['user1']['address']['city']
+print(city_user1)  # Output: New York
+print(users)
+for user, info in users.items():
+    print(f"User ID: {user}")
+    for key, value in info.items():
+        print(f"  {key}: {value}")
