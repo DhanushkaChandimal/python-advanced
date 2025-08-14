@@ -15,6 +15,15 @@
 #   \w: Matches any word character (equivalent to [a-zA-Z0-9_]).
 #   \s: Matches any whitespace character (spaces, tabs, line breaks).
 
+
+
+# re.findall(pattern, text)
+# re.search(pattern, text)
+# re.match(pattern, text)
+# re.split(pattern, text)
+# re.sub(pattern, replacer, text)
+# Grouping with Regex <<<()>>>
+
 import re
 
 # re.findall(pattern, text)
@@ -93,3 +102,19 @@ if thematch:
     print(f"Group 0: {thematch.group(0)}")  # Output: 123-456
     print(f"Group 1: {thematch.group(1)}")  # Output: 123
     print(f"Group 2: {thematch.group(2)}")  # Output: 456
+
+
+
+# Final Challenge (End of Lesson Exercise)
+emails = [
+    "correct.email@example.com",
+    "incorrect-email-at-example.com",
+    "another.correct.email@example.org"
+]
+
+for email in emails:
+    valid_email = re.search(r"\w+@\w+\.\w{2,3}", email)
+    if valid_email:
+        print(f"{email} is valid")
+    else:
+        print(f"{email} is invalid")
