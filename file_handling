@@ -12,3 +12,11 @@ file.close()
 
 with open('new_file.txt', 'a') as file:
     file.write('This is also possible\n') # I think self closing
+
+
+
+# # Reading files
+# Reading the file with 'r' mode
+with open('new_file.txt', 'r') as file:
+    content = file.read()  # Read the entire file content
+    print(content)
