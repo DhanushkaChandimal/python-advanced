@@ -48,7 +48,7 @@ if found:
 
 
 
-# re.match()
+# re.match(pattern, text)
 # The re.match() function checks whether the beginning of a string matches a specified pattern.
 # This method is different from re.search() because re.match() only checks the start of the string.
 # If the pattern is found at the beginning, a match object is returned; otherwise, it returns None.
@@ -56,4 +56,10 @@ url = "https://something.com"
 secure = re.match(r"https", url)
 if secure:
     print("This link goes to a secure website!")  # Output: This link goes to a secure website!
-    
+
+
+
+# re.split(pattern, text)
+text = 'Python,Regex;Splitting-Example. Fun, right!'
+words = re.split(r"[,.;\s!-]+", text)
+print(words)  
