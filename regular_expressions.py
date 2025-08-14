@@ -45,3 +45,15 @@ email = "kareem33-34-28@gmail.com"
 found = re.search(r"[\w.-]+@[\w-]+\.[a-z]{2,3}", email) # This will returns a match object
 if found:
     print(f"{found.group()} is a valid email! Please click continue!")
+
+
+
+# re.match()
+# The re.match() function checks whether the beginning of a string matches a specified pattern.
+# This method is different from re.search() because re.match() only checks the start of the string.
+# If the pattern is found at the beginning, a match object is returned; otherwise, it returns None.
+url = "https://something.com"
+secure = re.match(r"https", url)
+if secure:
+    print("This link goes to a secure website!")  # Output: This link goes to a secure website!
+    
