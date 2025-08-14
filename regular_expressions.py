@@ -63,3 +63,20 @@ if secure:
 text = 'Python,Regex;Splitting-Example. Fun, right!'
 words = re.split(r"[,.;\s!-]+", text)
 print(words)  
+
+
+
+# re.sub(pattern, replacer, text)
+number = "(770) 888-1180"
+formatted_number = re.sub(r"\D", '', number) # r"\D" matches any character that is not a digit. \D is the inverse of \d, which matches digits.
+print(formatted_number)  # Output: 7708881180
+
+chat = '''
+@Yve-bee123 : "I think I love Regex"
+@Travis : "Aren't you married?"
+@Yve_bee123 : "It's just not the same"
+@Travis : "They better not see this!"
+'''
+
+anon_chat = re.sub(r"@[\w-]+", '@user-anon', chat)
+print(anon_chat)
