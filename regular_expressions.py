@@ -34,3 +34,14 @@ for text in tweets:
     hashs = re.findall(r"#\w+", text)
     hash_tags.extend(hashs)
 print(hash_tags)
+
+
+
+# re.search(pattern, text)
+# The re.search() function searches through a string for the first occurrence of a pattern and returns a match object if a match is found.
+# It only finds the first match, making it ideal for validation purposes, like checking if an email address is valid.
+# If no match is found, it returns None.
+email = "kareem33-34-28@gmail.com"
+found = re.search(r"[\w.-]+@[\w-]+\.[a-z]{2,3}", email) # This will returns a match object
+if found:
+    print(f"{found.group()} is a valid email! Please click continue!")
