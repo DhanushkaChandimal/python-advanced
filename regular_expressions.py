@@ -80,3 +80,16 @@ chat = '''
 
 anon_chat = re.sub(r"@[\w-]+", '@user-anon', chat)
 print(anon_chat)
+
+
+
+# Grouping with Regex <<<()>>>
+# re.search(pattern, text).group(n)
+text = "123-456"
+pattern = r"(\d+)-(\d+)"
+thematch = re.search(pattern, text)
+if thematch:
+    print(f"Group  : {thematch.group()}")  # Output: 123-456
+    print(f"Group 0: {thematch.group(0)}")  # Output: 123-456
+    print(f"Group 1: {thematch.group(1)}")  # Output: 123
+    print(f"Group 2: {thematch.group(2)}")  # Output: 456
