@@ -20,3 +20,39 @@ with open('new_file.txt', 'a') as file:
 with open('new_file.txt', 'r') as file:
     content = file.read()  # Read the entire file content
     print(content)
+
+
+
+# Storing and Extracting Data from Lists and Dictionaries
+flowers = ["Wysteria", "Sunflowers", "Orchids", "Marigolds"]
+
+with open('garden.txt', 'w') as file:
+    for flower in flowers:
+        file.write(flower + '\n')
+
+flowers = []
+
+with open('garden.txt', 'r') as file:
+    for line in file:
+        flowers.append(line.strip())
+print(flowers)
+
+clubs = {
+    'Driver': 'Cobra',
+    'Irons': 'Sirixion',
+    'Hybrid': 'Callaway',
+    'Putter': 'Ping'
+}
+
+with open('golf_bag.txt', 'w') as file:
+    for club, brand in clubs.items():
+        file.write(f"{club}: {brand}\n")
+
+# Extracting dictionary data
+golf_clubs = {}
+
+with open('golf_bag.txt', 'r') as file:
+    for line in file:
+        club, brand = line.strip().split(': ')
+        golf_clubs[club] = brand
+print(golf_clubs)
